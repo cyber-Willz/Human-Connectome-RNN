@@ -1,0 +1,21 @@
+[package]
+name = "human_connectome_rnn"
+version = "0.1.0"
+edition = "2021"
+description = "Recurrent neural networks whose wiring, conduction delays and Dale's-law E/I structure are constrained by a human structural connectome"
+license = "MIT"
+
+[lib]
+name = "hcrnn"
+path = "src/lib.rs"
+
+[[bin]]
+name = "connectome_rnn"
+path = "src/bin/connectome_rnn.rs"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+debug = false
